@@ -71,8 +71,8 @@ class PostAdmin(BaseOwnerAdmin):
   actions_on_top = True
   actions_on_bottom = True
 
-  # 编辑页面
-  save_on_top = True
+  # 编辑页面(保存和编辑按钮),是否显示在顶部
+  # save_on_top = True
 
   # 通过 exclude 可以指定哪些字段不展示
   exclude = ('owner',)
@@ -87,7 +87,7 @@ class PostAdmin(BaseOwnerAdmin):
 
   fieldsets = (
       ('基础配置', {
-          "description": "基础配置描述",
+          # "description": "基础配置描述",
           "fields": (
               ('category','title'),
               'status'
@@ -118,11 +118,11 @@ class PostAdmin(BaseOwnerAdmin):
 
   operator.short_description = '操作'
 
-  class Media:
-    css = {
-      'all': ('https://cdn.bootcss.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css',)
-    }
-    js = ('https://cdn.bootcss.com/bootstrap/4.0.0-beta.2/js/bootstrap.bundle.js')
+  # class Media:
+  #   css = {
+  #     'all': ('https://cdn.bootcss.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css',)
+  #   }
+  #   js = ('https://cdn.bootcss.com/bootstrap/4.0.0-beta.2/js/bootstrap.bundle.js')
 
 
 
